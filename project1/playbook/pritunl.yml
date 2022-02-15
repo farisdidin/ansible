@@ -1,0 +1,68 @@
+---
+- name: Setup pritunl on server
+  become: yes
+  hosts: '{{ host }}'
+  tasks:
+    - name: add key pritunl
+      ansible.builtin.apt_key:
+        keyserver: keyserver.ubuntu.com
+        id: 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+      tags: setup_pritunl
+    - name: add pritunl repo
+      ansible.builtin.apt_repository:
+        repo: deb http://repo.pritunl.com/stable/apt focal main
+        state: present
+        filename: pritunl
+      tags: setup_pritunl
+    - name: add mongodb key
+      apt_key:
+        url: https://www.mongodb.org/static/pgp/server-5.0.asc
+        state: present
+      tags: setup_pritunl
+    - name: add mongodb repo
+      ansible.builtin.apt_repository:
+        repo: deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse
+        state: present
+        filename: mongodb-org-5.0
+      tags: setup_pritunl
+    - name: install pritunl and mongodb
+      apt:
+        name:
+          - pritunl
+          - mongodb-org
+        state: present
+        update_cache: yes
+      tags: setup_pritunl
+    - name: ensure pritunl
+      service:
+        name: pritunl
+        state: started
+        enabled: yes
+      tags: setup_pritunl
+    - name: ensure mongodb is running
+      service:
+        name: mongod
+        state: started
+        enabled: yes
+      tags: setup_pritunl
+    - name: get pritunl setup key
+      shell: "pritunl setup-key"
+      register: command_output
+      tags:
+        - setup_key
+        - setup_pritunl
+    - name: get pritunl default password
+      command: pritunl default-password
+      register: default_password
+      tags:
+        - default_password
+    - debug:
+        var:
+          command_output.stdout_lines
+          # - default_password.stdout_lines
+      tags:
+        - setup_key
+        - setup_pritunl
+    - debug:
+        var: default_password.stdout_lines
+      tags: default_password

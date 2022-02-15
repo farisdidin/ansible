@@ -1,0 +1,43 @@
+---
+- name: Setup jenkins server
+  become: yes
+  hosts: '{{ host }}'
+  tasks:
+    - name: Install Openjdk 11
+      apt:
+        name: openjdk-11-jdk
+        state: present
+    - name: Add key jenkins
+      apt_key:
+        url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+        state: present
+      tags: setup_jenkins
+    - name: Add jenkins repo to source list
+      apt_repository:
+        repo: deb http://pkg.jenkins.io/debian-stable binary/
+        state: present
+        filename: jenkins
+    - name: Install Jenkins
+      apt:
+        name: jenkins
+        state: present
+        update_cache: yes
+    - name: Ensure jenkins is running
+      service: 
+        name: jenkins
+        state: started
+        enabled: yes 
+    - name: Allow port 8080
+      ufw:
+        rule: allow
+        port: 8080
+    - name: Allow OpenSSH
+      ufw:
+        rule: allow
+        name: OpenSSH
+        state: enabled
+    - name: Get jenkins key
+      shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+      register: jenkins_key
+    - debug: 
+        var: jenkins_key.stdout_lines

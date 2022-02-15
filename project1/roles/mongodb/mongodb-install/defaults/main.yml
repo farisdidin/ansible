@@ -1,0 +1,7 @@
+mongo_version: 4.4.4-6
+mongo_packages:
+- percona-server-mongodb
+- percona-server-mongodb-mongos
+- percona-server-mongodb-shell
+- percona-server-mongodb-server
+- percona-server-mongodb-tools

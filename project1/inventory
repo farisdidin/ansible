@@ -1,0 +1,15 @@
+[example]
+159.65.137.89
+
+[example_us]
+167.99.12.190
+
+[jenkins]
+159.223.37.30
+
+[all:children]
+example
+example_us
+
+[all:vars]
+ansible_user=root

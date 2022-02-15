@@ -1,0 +1,5 @@
+---
+- name: Setup pritunl on server
+  become: yes
+  hosts: '{{ host }}'
+  tasks:

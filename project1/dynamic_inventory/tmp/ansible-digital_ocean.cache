@@ -1,0 +1,786 @@
+{
+  "data": {
+    "droplets": [
+      {
+        "status": "active", 
+        "kernel": null, 
+        "volume_ids": [], 
+        "locked": false, 
+        "name": "ansible-pritunl", 
+        "backup_ids": [], 
+        "vpc_uuid": "61a6002f-8e2c-45e6-887d-69cd616a30dd", 
+        "created_at": "2022-02-09T05:04:24Z", 
+        "snapshot_ids": [], 
+        "size_slug": "s-1vcpu-1gb", 
+        "networks": {
+          "v4": [
+            {
+              "type": "private", 
+              "netmask": "255.255.240.0", 
+              "ip_address": "10.104.0.2", 
+              "gateway": "10.104.0.1"
+            }, 
+            {
+              "type": "public", 
+              "netmask": "255.255.240.0", 
+              "ip_address": "159.65.137.89", 
+              "gateway": "159.65.128.1"
+            }
+          ], 
+          "v6": []
+        }, 
+        "next_backup_window": null, 
+        "vcpus": 1, 
+        "size": {
+          "price_monthly": 5.0, 
+          "available": true, 
+          "description": "Basic", 
+          "transfer": 1.0, 
+          "price_hourly": 0.00744, 
+          "regions": [
+            "ams3", 
+            "blr1", 
+            "fra1", 
+            "lon1", 
+            "nyc1", 
+            "nyc3", 
+            "sfo3", 
+            "sgp1", 
+            "tor1"
+          ], 
+          "vcpus": 1, 
+          "memory": 1024, 
+          "disk": 25, 
+          "slug": "s-1vcpu-1gb"
+        }, 
+        "image": {
+          "status": "available", 
+          "min_disk_size": 15, 
+          "slug": "ubuntu-20-04-x64", 
+          "name": "20.04 (LTS) x64", 
+          "tags": [], 
+          "created_at": "2022-02-01T16:53:57Z", 
+          "description": "Ubuntu 20.04 x86", 
+          "id": 101111514, 
+          "regions": [
+            "nyc3", 
+            "nyc1", 
+            "sfo1", 
+            "nyc2", 
+            "ams2", 
+            "sgp1", 
+            "lon1", 
+            "ams3", 
+            "fra1", 
+            "tor1", 
+            "sfo2", 
+            "blr1", 
+            "sfo3"
+          ], 
+          "distribution": "Ubuntu", 
+          "type": "base", 
+          "public": true, 
+          "size_gigabytes": 0.61
+        }, 
+        "memory": 1024, 
+        "region": {
+          "available": true, 
+          "sizes": [
+            "s-1vcpu-1gb", 
+            "s-1vcpu-1gb-amd", 
+            "s-1vcpu-1gb-intel", 
+            "s-1vcpu-2gb", 
+            "s-1vcpu-2gb-amd", 
+            "s-1vcpu-2gb-intel", 
+            "s-2vcpu-2gb", 
+            "s-2vcpu-2gb-amd", 
+            "s-2vcpu-2gb-intel", 
+            "s-2vcpu-4gb", 
+            "s-2vcpu-4gb-amd", 
+            "s-2vcpu-4gb-intel", 
+            "s-4vcpu-8gb", 
+            "c-2", 
+            "c2-2vcpu-4gb", 
+            "s-4vcpu-8gb-amd", 
+            "s-4vcpu-8gb-intel", 
+            "g-2vcpu-8gb", 
+            "gd-2vcpu-8gb", 
+            "s-8vcpu-16gb", 
+            "m-2vcpu-16gb", 
+            "c-4", 
+            "c2-4vcpu-8gb", 
+            "s-8vcpu-16gb-amd", 
+            "s-8vcpu-16gb-intel", 
+            "m3-2vcpu-16gb", 
+            "g-4vcpu-16gb", 
+            "so-2vcpu-16gb", 
+            "m6-2vcpu-16gb", 
+            "gd-4vcpu-16gb", 
+            "so1_5-2vcpu-16gb", 
+            "m-4vcpu-32gb", 
+            "c-8", 
+            "c2-8vcpu-16gb", 
+            "m3-4vcpu-32gb", 
+            "g-8vcpu-32gb", 
+            "so-4vcpu-32gb", 
+            "m6-4vcpu-32gb", 
+            "gd-8vcpu-32gb", 
+            "so1_5-4vcpu-32gb", 
+            "m-8vcpu-64gb", 
+            "c-16", 
+            "c2-16vcpu-32gb", 
+            "m3-8vcpu-64gb", 
+            "g-16vcpu-64gb", 
+            "so-8vcpu-64gb", 
+            "m6-8vcpu-64gb", 
+            "gd-16vcpu-64gb", 
+            "so1_5-8vcpu-64gb", 
+            "m-16vcpu-128gb", 
+            "c-32", 
+            "c2-32vcpu-64gb", 
+            "m3-16vcpu-128gb", 
+            "g-32vcpu-128gb", 
+            "so-16vcpu-128gb", 
+            "m6-16vcpu-128gb", 
+            "gd-32vcpu-128gb", 
+            "g-40vcpu-160gb", 
+            "so1_5-16vcpu-128gb", 
+            "gd-40vcpu-160gb"
+          ], 
+          "features": [
+            "backups", 
+            "ipv6", 
+            "metadata", 
+            "install_agent", 
+            "storage", 
+            "image_transfer"
+          ], 
+          "name": "Singapore 1", 
+          "slug": "sgp1"
+        }, 
+        "disk": 25, 
+        "id": 285839856, 
+        "tags": [
+          "pritunl", 
+          "ansible"
+        ], 
+        "features": [
+          "droplet_agent", 
+          "private_networking"
+        ]
+      }, 
+      {
+        "status": "active", 
+        "kernel": null, 
+        "volume_ids": [], 
+        "locked": false, 
+        "name": "jenkins", 
+        "backup_ids": [], 
+        "vpc_uuid": "61a6002f-8e2c-45e6-887d-69cd616a30dd", 
+        "created_at": "2022-02-11T08:18:41Z", 
+        "snapshot_ids": [], 
+        "size_slug": "s-1vcpu-2gb", 
+        "networks": {
+          "v4": [
+            {
+              "type": "private", 
+              "netmask": "255.255.240.0", 
+              "ip_address": "10.104.0.3", 
+              "gateway": "10.104.0.1"
+            }, 
+            {
+              "type": "public", 
+              "netmask": "255.255.240.0", 
+              "ip_address": "68.183.180.54", 
+              "gateway": "68.183.176.1"
+            }
+          ], 
+          "v6": []
+        }, 
+        "next_backup_window": null, 
+        "vcpus": 1, 
+        "size": {
+          "price_monthly": 10.0, 
+          "available": true, 
+          "description": "Basic", 
+          "transfer": 2.0, 
+          "price_hourly": 0.01488, 
+          "regions": [
+            "ams3", 
+            "blr1", 
+            "fra1", 
+            "lon1", 
+            "nyc1", 
+            "nyc3", 
+            "sfo3", 
+            "sgp1", 
+            "tor1"
+          ], 
+          "vcpus": 1, 
+          "memory": 2048, 
+          "disk": 50, 
+          "slug": "s-1vcpu-2gb"
+        }, 
+        "image": {
+          "status": "available", 
+          "min_disk_size": 15, 
+          "slug": "ubuntu-20-04-x64", 
+          "name": "20.04 (LTS) x64", 
+          "tags": [], 
+          "created_at": "2022-02-01T16:53:57Z", 
+          "description": "Ubuntu 20.04 x86", 
+          "id": 101111514, 
+          "regions": [
+            "nyc3", 
+            "nyc1", 
+            "sfo1", 
+            "nyc2", 
+            "ams2", 
+            "sgp1", 
+            "lon1", 
+            "ams3", 
+            "fra1", 
+            "tor1", 
+            "sfo2", 
+            "blr1", 
+            "sfo3"
+          ], 
+          "distribution": "Ubuntu", 
+          "type": "base", 
+          "public": true, 
+          "size_gigabytes": 0.61
+        }, 
+        "memory": 2048, 
+        "region": {
+          "available": true, 
+          "sizes": [
+            "s-1vcpu-1gb", 
+            "s-1vcpu-1gb-amd", 
+            "s-1vcpu-1gb-intel", 
+            "s-1vcpu-2gb", 
+            "s-1vcpu-2gb-amd", 
+            "s-1vcpu-2gb-intel", 
+            "s-2vcpu-2gb", 
+            "s-2vcpu-2gb-amd", 
+            "s-2vcpu-2gb-intel", 
+            "s-2vcpu-4gb", 
+            "s-2vcpu-4gb-amd", 
+            "s-2vcpu-4gb-intel", 
+            "s-4vcpu-8gb", 
+            "c-2", 
+            "c2-2vcpu-4gb", 
+            "s-4vcpu-8gb-amd", 
+            "s-4vcpu-8gb-intel", 
+            "g-2vcpu-8gb", 
+            "gd-2vcpu-8gb", 
+            "s-8vcpu-16gb", 
+            "m-2vcpu-16gb", 
+            "c-4", 
+            "c2-4vcpu-8gb", 
+            "s-8vcpu-16gb-amd", 
+            "s-8vcpu-16gb-intel", 
+            "m3-2vcpu-16gb", 
+            "g-4vcpu-16gb", 
+            "so-2vcpu-16gb", 
+            "m6-2vcpu-16gb", 
+            "gd-4vcpu-16gb", 
+            "so1_5-2vcpu-16gb", 
+            "m-4vcpu-32gb", 
+            "c-8", 
+            "c2-8vcpu-16gb", 
+            "m3-4vcpu-32gb", 
+            "g-8vcpu-32gb", 
+            "so-4vcpu-32gb", 
+            "m6-4vcpu-32gb", 
+            "gd-8vcpu-32gb", 
+            "so1_5-4vcpu-32gb", 
+            "m-8vcpu-64gb", 
+            "c-16", 
+            "c2-16vcpu-32gb", 
+            "m3-8vcpu-64gb", 
+            "g-16vcpu-64gb", 
+            "so-8vcpu-64gb", 
+            "m6-8vcpu-64gb", 
+            "gd-16vcpu-64gb", 
+            "so1_5-8vcpu-64gb", 
+            "m-16vcpu-128gb", 
+            "c-32", 
+            "c2-32vcpu-64gb", 
+            "m3-16vcpu-128gb", 
+            "g-32vcpu-128gb", 
+            "so-16vcpu-128gb", 
+            "m6-16vcpu-128gb", 
+            "gd-32vcpu-128gb", 
+            "g-40vcpu-160gb", 
+            "so1_5-16vcpu-128gb", 
+            "gd-40vcpu-160gb"
+          ], 
+          "features": [
+            "backups", 
+            "ipv6", 
+            "metadata", 
+            "install_agent", 
+            "storage", 
+            "image_transfer"
+          ], 
+          "name": "Singapore 1", 
+          "slug": "sgp1"
+        }, 
+        "disk": 50, 
+        "id": 286196253, 
+        "tags": [
+          "jenkins"
+        ], 
+        "features": [
+          "droplet_agent", 
+          "private_networking"
+        ]
+      }
+    ]
+  }, 
+  "inventory": {
+    "distro_Ubuntu": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "image_20.04__LTS__x64": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "all": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "region_sgp1": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "ansible-pritunl": {
+      "hosts": [
+        "159.65.137.89"
+      ], 
+      "vars": {}
+    }, 
+    "_meta": {
+      "hostvars": {
+        "159.65.137.89": {
+          "do_id": 285839856, 
+          "do_vpc_uuid": "61a6002f-8e2c-45e6-887d-69cd616a30dd", 
+          "do_snapshot_ids": [], 
+          "do_region": {
+            "available": true, 
+            "sizes": [
+              "s-1vcpu-1gb", 
+              "s-1vcpu-1gb-amd", 
+              "s-1vcpu-1gb-intel", 
+              "s-1vcpu-2gb", 
+              "s-1vcpu-2gb-amd", 
+              "s-1vcpu-2gb-intel", 
+              "s-2vcpu-2gb", 
+              "s-2vcpu-2gb-amd", 
+              "s-2vcpu-2gb-intel", 
+              "s-2vcpu-4gb", 
+              "s-2vcpu-4gb-amd", 
+              "s-2vcpu-4gb-intel", 
+              "s-4vcpu-8gb", 
+              "c-2", 
+              "c2-2vcpu-4gb", 
+              "s-4vcpu-8gb-amd", 
+              "s-4vcpu-8gb-intel", 
+              "g-2vcpu-8gb", 
+              "gd-2vcpu-8gb", 
+              "s-8vcpu-16gb", 
+              "m-2vcpu-16gb", 
+              "c-4", 
+              "c2-4vcpu-8gb", 
+              "s-8vcpu-16gb-amd", 
+              "s-8vcpu-16gb-intel", 
+              "m3-2vcpu-16gb", 
+              "g-4vcpu-16gb", 
+              "so-2vcpu-16gb", 
+              "m6-2vcpu-16gb", 
+              "gd-4vcpu-16gb", 
+              "so1_5-2vcpu-16gb", 
+              "m-4vcpu-32gb", 
+              "c-8", 
+              "c2-8vcpu-16gb", 
+              "m3-4vcpu-32gb", 
+              "g-8vcpu-32gb", 
+              "so-4vcpu-32gb", 
+              "m6-4vcpu-32gb", 
+              "gd-8vcpu-32gb", 
+              "so1_5-4vcpu-32gb", 
+              "m-8vcpu-64gb", 
+              "c-16", 
+              "c2-16vcpu-32gb", 
+              "m3-8vcpu-64gb", 
+              "g-16vcpu-64gb", 
+              "so-8vcpu-64gb", 
+              "m6-8vcpu-64gb", 
+              "gd-16vcpu-64gb", 
+              "so1_5-8vcpu-64gb", 
+              "m-16vcpu-128gb", 
+              "c-32", 
+              "c2-32vcpu-64gb", 
+              "m3-16vcpu-128gb", 
+              "g-32vcpu-128gb", 
+              "so-16vcpu-128gb", 
+              "m6-16vcpu-128gb", 
+              "gd-32vcpu-128gb", 
+              "g-40vcpu-160gb", 
+              "so1_5-16vcpu-128gb", 
+              "gd-40vcpu-160gb"
+            ], 
+            "features": [
+              "backups", 
+              "ipv6", 
+              "metadata", 
+              "install_agent", 
+              "storage", 
+              "image_transfer"
+            ], 
+            "name": "Singapore 1", 
+            "slug": "sgp1"
+          }, 
+          "do_name": "ansible-pritunl", 
+          "do_tags": [
+            "pritunl", 
+            "ansible"
+          ], 
+          "do_disk": 25, 
+          "do_size_slug": "s-1vcpu-1gb", 
+          "do_volume_ids": [], 
+          "do_vcpus": 1, 
+          "do_kernel": null, 
+          "do_features": [
+            "droplet_agent", 
+            "private_networking"
+          ], 
+          "do_locked": false, 
+          "do_memory": 1024, 
+          "do_created_at": "2022-02-09T05:04:24Z", 
+          "do_networks": {
+            "v4": [
+              {
+                "type": "private", 
+                "netmask": "255.255.240.0", 
+                "ip_address": "10.104.0.2", 
+                "gateway": "10.104.0.1"
+              }, 
+              {
+                "type": "public", 
+                "netmask": "255.255.240.0", 
+                "ip_address": "159.65.137.89", 
+                "gateway": "159.65.128.1"
+              }
+            ], 
+            "v6": []
+          }, 
+          "do_backup_ids": [], 
+          "do_next_backup_window": null, 
+          "do_status": "active", 
+          "do_size": {
+            "price_monthly": 5.0, 
+            "available": true, 
+            "description": "Basic", 
+            "transfer": 1.0, 
+            "price_hourly": 0.00744, 
+            "regions": [
+              "ams3", 
+              "blr1", 
+              "fra1", 
+              "lon1", 
+              "nyc1", 
+              "nyc3", 
+              "sfo3", 
+              "sgp1", 
+              "tor1"
+            ], 
+            "vcpus": 1, 
+            "memory": 1024, 
+            "disk": 25, 
+            "slug": "s-1vcpu-1gb"
+          }, 
+          "do_image": {
+            "status": "available", 
+            "min_disk_size": 15, 
+            "slug": "ubuntu-20-04-x64", 
+            "name": "20.04 (LTS) x64", 
+            "tags": [], 
+            "created_at": "2022-02-01T16:53:57Z", 
+            "description": "Ubuntu 20.04 x86", 
+            "id": 101111514, 
+            "regions": [
+              "nyc3", 
+              "nyc1", 
+              "sfo1", 
+              "nyc2", 
+              "ams2", 
+              "sgp1", 
+              "lon1", 
+              "ams3", 
+              "fra1", 
+              "tor1", 
+              "sfo2", 
+              "blr1", 
+              "sfo3"
+            ], 
+            "distribution": "Ubuntu", 
+            "type": "base", 
+            "public": true, 
+            "size_gigabytes": 0.61
+          }
+        }, 
+        "68.183.180.54": {
+          "do_id": 286196253, 
+          "do_vpc_uuid": "61a6002f-8e2c-45e6-887d-69cd616a30dd", 
+          "do_snapshot_ids": [], 
+          "do_region": {
+            "available": true, 
+            "sizes": [
+              "s-1vcpu-1gb", 
+              "s-1vcpu-1gb-amd", 
+              "s-1vcpu-1gb-intel", 
+              "s-1vcpu-2gb", 
+              "s-1vcpu-2gb-amd", 
+              "s-1vcpu-2gb-intel", 
+              "s-2vcpu-2gb", 
+              "s-2vcpu-2gb-amd", 
+              "s-2vcpu-2gb-intel", 
+              "s-2vcpu-4gb", 
+              "s-2vcpu-4gb-amd", 
+              "s-2vcpu-4gb-intel", 
+              "s-4vcpu-8gb", 
+              "c-2", 
+              "c2-2vcpu-4gb", 
+              "s-4vcpu-8gb-amd", 
+              "s-4vcpu-8gb-intel", 
+              "g-2vcpu-8gb", 
+              "gd-2vcpu-8gb", 
+              "s-8vcpu-16gb", 
+              "m-2vcpu-16gb", 
+              "c-4", 
+              "c2-4vcpu-8gb", 
+              "s-8vcpu-16gb-amd", 
+              "s-8vcpu-16gb-intel", 
+              "m3-2vcpu-16gb", 
+              "g-4vcpu-16gb", 
+              "so-2vcpu-16gb", 
+              "m6-2vcpu-16gb", 
+              "gd-4vcpu-16gb", 
+              "so1_5-2vcpu-16gb", 
+              "m-4vcpu-32gb", 
+              "c-8", 
+              "c2-8vcpu-16gb", 
+              "m3-4vcpu-32gb", 
+              "g-8vcpu-32gb", 
+              "so-4vcpu-32gb", 
+              "m6-4vcpu-32gb", 
+              "gd-8vcpu-32gb", 
+              "so1_5-4vcpu-32gb", 
+              "m-8vcpu-64gb", 
+              "c-16", 
+              "c2-16vcpu-32gb", 
+              "m3-8vcpu-64gb", 
+              "g-16vcpu-64gb", 
+              "so-8vcpu-64gb", 
+              "m6-8vcpu-64gb", 
+              "gd-16vcpu-64gb", 
+              "so1_5-8vcpu-64gb", 
+              "m-16vcpu-128gb", 
+              "c-32", 
+              "c2-32vcpu-64gb", 
+              "m3-16vcpu-128gb", 
+              "g-32vcpu-128gb", 
+              "so-16vcpu-128gb", 
+              "m6-16vcpu-128gb", 
+              "gd-32vcpu-128gb", 
+              "g-40vcpu-160gb", 
+              "so1_5-16vcpu-128gb", 
+              "gd-40vcpu-160gb"
+            ], 
+            "features": [
+              "backups", 
+              "ipv6", 
+              "metadata", 
+              "install_agent", 
+              "storage", 
+              "image_transfer"
+            ], 
+            "name": "Singapore 1", 
+            "slug": "sgp1"
+          }, 
+          "do_name": "jenkins", 
+          "do_tags": [
+            "jenkins"
+          ], 
+          "do_disk": 50, 
+          "do_size_slug": "s-1vcpu-2gb", 
+          "do_volume_ids": [], 
+          "do_vcpus": 1, 
+          "do_kernel": null, 
+          "do_features": [
+            "droplet_agent", 
+            "private_networking"
+          ], 
+          "do_locked": false, 
+          "do_memory": 2048, 
+          "do_created_at": "2022-02-11T08:18:41Z", 
+          "do_networks": {
+            "v4": [
+              {
+                "type": "private", 
+                "netmask": "255.255.240.0", 
+                "ip_address": "10.104.0.3", 
+                "gateway": "10.104.0.1"
+              }, 
+              {
+                "type": "public", 
+                "netmask": "255.255.240.0", 
+                "ip_address": "68.183.180.54", 
+                "gateway": "68.183.176.1"
+              }
+            ], 
+            "v6": []
+          }, 
+          "do_backup_ids": [], 
+          "do_next_backup_window": null, 
+          "do_status": "active", 
+          "do_size": {
+            "price_monthly": 10.0, 
+            "available": true, 
+            "description": "Basic", 
+            "transfer": 2.0, 
+            "price_hourly": 0.01488, 
+            "regions": [
+              "ams3", 
+              "blr1", 
+              "fra1", 
+              "lon1", 
+              "nyc1", 
+              "nyc3", 
+              "sfo3", 
+              "sgp1", 
+              "tor1"
+            ], 
+            "vcpus": 1, 
+            "memory": 2048, 
+            "disk": 50, 
+            "slug": "s-1vcpu-2gb"
+          }, 
+          "do_image": {
+            "status": "available", 
+            "min_disk_size": 15, 
+            "slug": "ubuntu-20-04-x64", 
+            "name": "20.04 (LTS) x64", 
+            "tags": [], 
+            "created_at": "2022-02-01T16:53:57Z", 
+            "description": "Ubuntu 20.04 x86", 
+            "id": 101111514, 
+            "regions": [
+              "nyc3", 
+              "nyc1", 
+              "sfo1", 
+              "nyc2", 
+              "ams2", 
+              "sgp1", 
+              "lon1", 
+              "ams3", 
+              "fra1", 
+              "tor1", 
+              "sfo2", 
+              "blr1", 
+              "sfo3"
+            ], 
+            "distribution": "Ubuntu", 
+            "type": "base", 
+            "public": true, 
+            "size_gigabytes": 0.61
+          }
+        }
+      }
+    }, 
+    "image_ubuntu-20-04-x64": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "image_101111514": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "status_active": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "size_s-1vcpu-2gb": {
+      "hosts": [
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "285839856": {
+      "hosts": [
+        "159.65.137.89"
+      ], 
+      "vars": {}
+    }, 
+    "ansible": {
+      "hosts": [
+        "159.65.137.89"
+      ], 
+      "vars": {}
+    }, 
+    "pritunl": {
+      "hosts": [
+        "159.65.137.89"
+      ], 
+      "vars": {}
+    }, 
+    "jenkins": {
+      "hosts": [
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "size_s-1vcpu-1gb": {
+      "hosts": [
+        "159.65.137.89"
+      ], 
+      "vars": {}
+    }, 
+    "286196253": {
+      "hosts": [
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }, 
+    "digital_ocean": {
+      "hosts": [
+        "159.65.137.89", 
+        "68.183.180.54"
+      ], 
+      "vars": {}
+    }
+  }
+}

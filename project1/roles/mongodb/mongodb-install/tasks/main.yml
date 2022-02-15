@@ -1,0 +1,44 @@
+---
+- name: Install Python pip
+  apt:
+    update_cache: yes
+    name: python3-pip
+  tags: [mongodb, dependency]
+
+- name: Install pymongo
+  pip:
+    name: pymongo
+  tags: [mongodb, dependency]
+
+- name: Import the public key used by the package management system
+  apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=7F0CEB10 state=present
+  tags: [mongodb, install]
+
+- name: Add Percona MongoDB repository
+  apt:
+    deb: https://repo.percona.com/apt/percona-release_latest.focal_all.deb
+  tags: [mongodb, install]
+
+- name: Enable repository percona mongodb
+  shell: /usr/bin/percona-release enable psmdb-44 release
+  tags: [mongodb, install]
+
+- name: install mongodb
+  apt:
+    update_cache: yes
+    name: "{{ item }}={{ mongo_version }}"
+  with_items: "{{ mongo_packages }}"
+  notify:
+  - start mongodb
+  tags: [mongodb, install]
+
+- name: Create admin user
+  community.mongodb.mongodb_user:
+    database: admin
+    name: '{{ mongodb_admin.user }}'
+    password: '{{ mongodb_admin.password }}'
+    roles: readWrite,dbAdmin,userAdmin,clusterAdmin,userAdminAnyDatabase,root
+    state: present
+  when: ansible_facts.hostname.split('-')[-1] == "1"
+  tags: [mongodb, install, createAdmin]
+
