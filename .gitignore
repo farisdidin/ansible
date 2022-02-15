@@ -1,4 +1,5 @@
 *.ini
 *.cfg
 notes/
-**/tmp
+**/tmp/
+project1/inventory
