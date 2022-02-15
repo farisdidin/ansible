@@ -1,4 +1,4 @@
 *.ini
 *.cfg
 notes/
-*.cache
+**/*.cache
